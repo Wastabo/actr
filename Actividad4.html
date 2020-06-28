@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="css/estilos.css">
+	<title>Felicitación</title>
+</head>
+<body >
+
+
+	
+	<center><h1>Cartas de Felictación</h1></center>
+	<form name=opciones style="margin-left: 450px" > 
+        <h2>Tipo de Felicitación</h2>
+<p style="float">Felicitación Boda</p>
+        <input type="Radio" name="opci" id="uno" value="uno" style="float">  
+<p style="float">Felicitación Cumpleaños</p> 
+        <input type="Radio" name="opci" id="dos" value="dos" style="float"> 
+<p style="float">Felicitación Casual</p>
+        <input type="Radio" name="opci" id="tres" value="tres" style="float">  
+
+</form>
+<br><br>
+
+<form name=imagen style="margin-left: 450px" > 
+             <h2>Elige una imagen.</h2>
+		
+		<img src="img/love.jpg" width="20%" height="30%">
+		<img src="img/feliz cumple.jpg" width="20%" height="30%">
+		<img src="img/motivacion3.jpg" width="20%" height="30%"><br><br>
+<label style="margin-left: 55px;">
+<input type="Radio" name="imagenes" value="image1"   id="image1"> Boda </label>
+<label style="margin-left: 95px;">
+<input type="Radio" name="imagenes" value="image2"  id="image2"> Cumpleaños </label>
+<label style="margin-left: 60px;">
+<input type="Radio" name="imagenes" value="image3"  id="image3"> Felicitación Casual </label>
+
+<br><br>
+<form name=texto style="margin-left: 450px" > 
+		<h2>Felicitación</h2>
+		
+		<textarea placeholder="Escriba su felicitacion." name="Area" id="aria" rows="11" cols="50" style="float: left;"></textarea>
+
+Titulo de la Carta de Felicitacion
+<br>
+<input type="text" name="Titulo de Carta"  placeholder="Escriba un Título" id="tit" style="float"><br><br>
+Subtitulo de la Carta de Felicitacion
+<br>
+<input type="text" name="Subtitulo de Carta"  placeholder="Escriba un Subtítulo" id="sub" style="float"><br><br>
+Nombre de la persona a quien va dedicada la Carta
+<br>
+<input type="text" name="Carta dedicada a" placeholder="Escriba el nombre de la persona" id="per" style="float"><br><br>
+
+
+</form>
+
+<br><br>
+<form name=texto style="margin-left: 460px" > 
+		<h2>Color de la Felicitación</h2>
+		
+		<input type="color" name="color" id="cambio" style="margin-left: 50px;">
+		<button type="button" onclick="Generador();" style="float: right;margin-right: 500px;height: 50px;width: 150px;margin-bottom: 50px; ">Crear Felicitación</button>
+		
+		
+<br><br>
+
+</form>
+
+<a href="index.html" class="btn btn-success" align="center">Volver al Menu Principal</a>
+
+
+
+<p id="fondo1"></p>
+
+<script type="text/javascript">
+	function Generador(){
+		//titulo,subtitulo,area de texto,persona,fondo,autor,date
+		var B,C,A,E,F,G,D;
+		
+		B=document.getElementById("tit").value;
+		C=document.getElementById("sub").value;
+		A=document.getElementById("aria").value;
+		E=document.getElementById("per").value;
+		F=document.getElementById("cambio").value;
+		G=prompt("Ingresa tu nombre")
+		D=new Date();
+
+			//document.getElementById("fondo1").style.backgroundColor=F;
+			
+		
+		
+
+			
+		//1
+		if(document.getElementById("uno").checked == true){
+			
+			if(document.getElementById("image1").checked == true){
+				
+
+		document.write('<article >'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="Red">'+B+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="Red">'+C+'</font>'+'<br>'+'<br>'+'<img src="img/love.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Comic Sans MS,arial,verdana"; size=4; color="Red">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Me alegra haberte Saludado, Muchas Felicidades "+E+"."+'<br>'+'<br>'+'<h3 style="float:right">'+G+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>'+'<br>'+'<br>'+'<br>'+'<br>'+'<a href="index.html" class="btn btn-success" align="center">Volver al Menu Principal</a>');
+		document.body.style.backgroundColor = F;
+                
+}
+	else if(document.getElementById("image2").checked == true){
+
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="Red">'+B+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="Red">'+C+'</font>'+'<br>'+'<br>'+'<img src="img/feliz cumple.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Comic Sans MS,arial,verdana"; size=4; color="Red">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Me alegra haberte Saludado, Muchas Felicidades "+E+"."+'<br>'+'<br>'+'<h3 style="float:right">'+G+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>'+'<br>'+'<br>'+'<br>'+'<br>'+'<a href="index.html" class="btn btn-success" align="center">Volver al Menu Principal</a>');
+		document.body.style.backgroundColor = F;
+}
+else if(document.getElementById("image3").checked == true){
+
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="Red">'+B+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="Red">'+C+'</font>'+'<br>'+'<br>'+'<img src="img/motivacion3.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Comic Sans MS,arial,verdana"; size=4; color="Red">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Me alegra haberte Saludado, Muchas Felicidades "+E+"."+'<br>'+'<br>'+'<h3 style="float:right">'+G+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>'+'<br>'+'<br>'+'<br>'+'<br>'+'<a href="index.html" class="btn btn-success" align="center">Volver al Menu Principal</a>');
+		document.body.style.backgroundColor = F;
+}
+
+	}
+	//2
+	else if(document.getElementById("dos").checked == true){
+			if(document.getElementById("image1").checked == true){
+
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="skyblue">'+B+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="skyblue">'+C+'</font>'+'<br>'+'<br>'+'<img src="img/love.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Brush Script MT"; size=4; color="skyblue">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Me alegra haberte Saludado, Muchas Felicidades "+E+"."+'<br>'+'<br>'+'<h3 style="float:right">'+G+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>'+'<br>'+'<br>'+'<br>'+'<br>'+'<a href="index.html" class="btn btn-success" align="center">Volver al Menu Principal</a>');
+		document.body.style.backgroundColor = F;
+}
+	else if(document.getElementById("image2").checked == true){
+
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="skyblue">'+B+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="skyblue">'+C+'</font>'+'<br>'+'<br>'+'<img src="img/feliz cumple.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Brush Script MT"; size=4; color="skyblue">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Me alegra haberte Saludado, Muchas Felicidades "+E+"."+'<br>'+'<br>'+'<h3 style="float:right">'+G+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>'+'<br>'+'<br>'+'<br>'+'<br>'+'<a href="index.html" class="btn btn-success" align="center">Volver al Menu Principal</a>');
+		document.body.style.backgroundColor = F;
+}
+else if(document.getElementById("image3").checked == true){
+
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="skyblue">'+B+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="skyblue">'+C+'</font>'+'<br>'+'<br>'+'<img src="img/motivacion3.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Brush Script MT"; size=4; color="skyblue">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Me alegra haberte Saludado, Muchas Felicidades "+E+"."+'<br>'+'<br>'+'<h3 style="float:right">'+G+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>'+'<br>'+'<br>'+'<br>'+'<br>'+'<a href="index.html" class="btn btn-success" align="center">Volver al Menu Principal</a>');
+		document.body.style.backgroundColor = F;
+}
+
+	}
+//3
+	else if(document.getElementById("tres").checked == true){
+			if(document.getElementById("image1").checked == true){
+
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="gray">'+B+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="gray">'+C+'</font>'+'<br>'+'<br>'+'<img src="img/love.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="gray">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Me alegra haberte Saludado, Muchas Felicidades "+E+"."+'<br>'+'<br>'+'<h3 style="float:right">'+G+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>'+'<br>'+'<br>'+'<br>'+'<br>'+'<a href="index.html" class="btn btn-success" align="center">Volver al Menu Principal</a>');
+		document.body.style.backgroundColor = F;
+}
+	else if(document.getElementById("image2").checked == true){
+
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="gray">'+B+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="gray">'+C+'</font>'+'<br>'+'<br>'+'<img src="img/feliz cumple.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="gray">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Me alegra haberte Saludado, Muchas Felicidades "+E+"."+'<br>'+'<br>'+'<h3 style="float:right">'+G+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>'+'<br>'+'<br>'+'<br>'+'<br>'+'<a href="index.html" class="btn btn-success" align="center">Volver al Menu Principal</a>');
+		document.body.style.backgroundColor = F;
+}
+else if(document.getElementById("image3").checked == true){
+
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="gray">'+B+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="gray">'+C+'</font>'+'<br>'+'<br>'+'<img src="img/motivacion3.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="gray">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Me alegra haberte Saludado, Muchas Felicidades "+E+"."+'<br>'+'<br>'+'<h3 style="float:right">'+G+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>'+'<br>'+'<br>'+'<br>'+'<br>'+'<a href="index.html" class="btn btn-success" align="center">Volver al Menu Principal</a>');
+		document.body.style.backgroundColor = F;
+}
+
+	}
+
+
+			
+	}
+</script>
+
+</style>
+</body>
+</html>
